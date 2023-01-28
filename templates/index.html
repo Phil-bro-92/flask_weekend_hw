@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block content %}
+
+<main>
+  <section>
+    <h2>Add a New Book</h2>
+    <form action="/books" method="post">
+      <input
+        type="text"
+        name="book-title"
+        id="book-title"
+        placeholder="Enter Title"
+      />
+      <input
+        type="text"
+        name="book-author"
+        id="book-author"
+        placeholder="Enter Author"
+      />
+      <input
+        type="text"
+        name="book-genre"
+        id="book-genre"
+        placeholder="Enter Genre"
+      />
+      <label for="checked-out" id="check-out">Check-out</label>
+      <input type="checkbox" name="checked-out">
+      <input type="submit" id="submit-btn" value="Add" />
+    </form>
+  </section>
+  <section class="book-list">
+    {% for book in books %}
+    <div>
+      <h3><a href="/books/{{books.index(book)}}">{{book.title}}</a></h3>
+      <h5>Author: {{book.author}}</h5>
+      <p>Genre: {{book.genre}}</p>
+      {% if book.checked_out %}
+      <span>checked out: &#9989;</span>
+      {%else%}
+      <span>checked out: &#10060;</span>
+      {% endif %}
+      <form action="/books/delete/{{books.index(book)}}" method="post">
+        <input type="submit" value="Delete" id="delete-btn" />
+      </form>
+    </div>
+    {%endfor%}
+  </section>
+</main>
+{% endblock %}

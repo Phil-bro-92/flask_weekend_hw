@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap");
+* {
+  font-family: "Unbounded", cursive;
+}
+header {
+  margin-bottom: 10px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(244, 26, 26) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  padding-bottom: 5px;
+}
+
+header > h1 {
+  text-align: center;
+  color: white;
+  padding-top: 15px;
+  font-family: "Unbounded", cursive;
+}
+
+header > nav > ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header > nav > ul > li {
+  list-style-type: none;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  color: rgb(192, 229, 234);
+}
+
+header > nav > ul > li > a:hover {
+  color: rgb(152, 150, 184);
+}
+
+main {
+  background-color: mintcream;
+}
+
+main > section > h2 {
+  text-align: center;
+}
+
+main > section > form {
+  background-color: snow;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+main > section > form > input {
+  border-radius: 5px;
+  padding: 3px;
+  max-width: 100px;
+}
+
+#check-out {
+    padding-top: 3px;
+    padding-left: 3px;
+}
+
+#submit-btn {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.book-list {
+  text-decoration: none;
+  color: black;
+}
+.book-list > div {
+  background-color: rgb(7, 26, 58);
+  font-size: 15px;
+  color: white;
+  margin: 5px;
+  padding: 2px 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-height: 200px;
+}
+
+.book-list > div > h3 > a {
+    text-decoration: none;
+    color: rgb(227, 210, 173);
+}
+
+.book-list > div > form {
+    padding: 10px;
+}
+
+#delete-btn {
+    color: white;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.book-list > div:hover {
+  background-color: rgb(18, 62, 76);
+}
+
+footer {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    190deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgb(244, 26, 26) 100%,
+  );
+}
+
+footer > ul {
+  list-style: none;
+  margin-right: 20px;
+}
+
+footer > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+footer > ul > li > a:hover {
+  color: black;
+}
+
+@media (min-width: 700px) {
+  .book-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  main > section > form > input {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .book-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  main > section > form > input {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* book.html */
+
+#book-main > section {
+  background-color: rgb(23, 68, 144);
+  font-size: 24px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
